@@ -1,5 +1,32 @@
 {% extends "_templates/base.html" %}
 
 
-{% block content %}Watch this space{% endblock %}
+{% block content %}
+
+Watch this space
+
+
+<h3>Blogs</h3>
+
+
+    {% for blog in collection.blog.get_records() %}
+
+        <a href="/blog/{{ blog.get_id() }}.html">{{ blog.get_data().get("title").get("value") }}</a>
+
+    {% endfor %}
+
+
+<h3>Events</h3>
+
+    {% for event in collection.event.get_records() %}
+
+        <a href="/event/{{ event.get_id() }}.html">{{ event.get_data().get("title").get("value") }}</a>
+
+    {% endfor %}
+
+
+
+
+
+{% endblock %}
 
