@@ -4,6 +4,8 @@ from staticpipes.pipes.jinja2 import PipeJinja2
 from staticpipes.pipes.exclude_underscore_directories import PipeExcludeUnderscoreDirectories
 from staticpipes.pipes.exclude_dot_directories import PipeExcludeDotDirectories
 from staticpipesdatatig.pipes.load_datatig import PipeLoadDatatig
+from staticpipesdatatig.pipes.datatig_write_staticsite_output import PipeDatatigStaticSite
+
 from staticpipes.pipes.collection_records_process import PipeCollectionRecordsProcess
 from staticpipes.processes.jinja2 import ProcessJinja2
 
@@ -34,6 +36,7 @@ config = Config(
             context_key_record_id="blog_id",
             context_key_record_data="blog"
         ),
+        PipeDatatigStaticSite(output_dir="datatig"),
     ],
 )
 

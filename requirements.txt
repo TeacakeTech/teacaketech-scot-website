@@ -60,7 +60,7 @@ staticpipes[allbuild]==0.0.6
     # via
     #   -r requirements.in
     #   staticpipes-datatig
-staticpipes-datatig @ git+https://github.com/StaticPipes/StaticPipes-DataTig.git@b382c4932e1ee70ce00e7cb1ec7ee27e7ced8b09
+staticpipes-datatig @ git+https://github.com/StaticPipes/StaticPipes-DataTig.git@c3ec1f355b425f66999f08500bf9225358aab34a
     # via -r requirements.in
 tzlocal==5.3.1
     # via dateparser
